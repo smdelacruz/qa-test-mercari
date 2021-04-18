@@ -1,0 +1,16 @@
+class ShippingAddresspage():
+    """
+    Shipping address Screen
+    """
+    #Step : Add Shipping Address
+    def click_add_shipping():
+        find_element("add_shipping_element").click()
+
+     # Step: Get all shipping address on the list
+    def get_all_address():
+        .......
+
+    #Step: Navigate to Shipping Address Form from Shipping address list page
+    def click_add_new_shipping_address():
+        find_element("add_shipping_element_link").click()
+        
