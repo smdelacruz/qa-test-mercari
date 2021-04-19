@@ -37,12 +37,14 @@ class MercariTest(basetest.BaseTest):
         self.timelinepage.navigate_to_mypage()
         self.mypage.navigate_to_personal_information_page()
         self.personalinfopage.navigate_to_shipping_address_page()
+        address_list_count = self.shippingaddresspage.get_all_address_count()
         self.personalinfopage.click_add_new_shipping_address()
-        self.addshippingpage.fill_out_shipping_form() #expects return of address infor
+        addresses_list = self.addshippingpage.fill_out_shipping_form() #expects return of address infor
         self.addshippingpage.click_submit_address_button()
         self.addshippingpage.click_back_to_shipping_address_list_button()
-        for address_item in addresses_list:
-            assert address_item is equal address_info
+        new_address_list_count = self.shippingaddresspage.get_all_address_count()
+        assert (address_list_count + 1) is equal to new_address_list_count
+        assert addresses_list exist on the shippingaddresspage list page
 
     def test_ex2_sc2_search_result_title(self):
         """

@@ -13,6 +13,7 @@ class BaseTest(unittest.TestCase):
         self.mypage = MyPage()
         self.personalinfopage = PersonalInformationPage()
         self.addshippingpage = AddShippingPage()
+        self.shippingaddresspage = ShippingAddresspage()
 
     # tearDown
     def tearDown():
